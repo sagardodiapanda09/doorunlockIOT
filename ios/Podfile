@@ -16,7 +16,7 @@ end
 
 target 'doorunlock' do
   config = use_native_modules!
-
+  pod 'SeosMobileKeysSDK-Debug', :path  => 'Mobile_Keys_IOS_SDK/Debug/SeosMobileKeysSDK-Debug.podspec'
   use_react_native!(
     :path => config[:reactNativePath],
     # An absolute path to your application root.

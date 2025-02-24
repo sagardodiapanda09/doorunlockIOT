@@ -24,6 +24,17 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>We use Bluetooth to communicate with locks.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We need location access to improve BLE performance.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Location is required for background unlocking.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+    	<string>bluetooth-central</string>
+	</array>
+
 	<key>NSAppTransportSecurity</key>
 	<dict>
 	  <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->

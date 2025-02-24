@@ -1,0 +1,3 @@
+BerTlv (0.2.5)
+CocoaLumberjack (3.8.5)
+JSONModel (1.8.0)
