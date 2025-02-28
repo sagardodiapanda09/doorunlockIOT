@@ -5,127 +5,172 @@
  * @format
  */
 
-import React from 'react';
-import type {PropsWithChildren} from 'react';
+import React, {useEffect} from 'react';
 import {
-  ScrollView,
   StatusBar,
-  StyleSheet,
-  Text,
+  // StyleSheet,
   useColorScheme,
+  NativeModules,
+  Button,
+  SafeAreaView,
+  NativeEventEmitter,
+  Alert,
+  Image,
   View,
 } from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-}
+import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+    flex: 1,
   };
 
-  /*
-   * To keep the template simple and small we're adding padding to prevent view
-   * from rendering under the System UI.
-   * For bigger apps the reccomendation is to use `react-native-safe-area-context`:
-   * https://github.com/AppAndFlow/react-native-safe-area-context
-   *
-   * You can read more about it here:
-   * https://github.com/react-native-community/discussions-and-proposals/discussions/827
-   */
-  const safePadding = '5%';
+  useEffect(() => {
+    const {SeosMobileKeysModule} = NativeModules;
+    console.log({SeosMobileKeysModule});
+    const eventEmitter = new NativeEventEmitter(SeosMobileKeysModule);
+
+    eventEmitter.addListener('onMessageFromSeos', event => {
+      console.log('DEBUG ---- From React App', event);
+      switch (event?.withName) {
+        case 'mobileKeysDidFailtoSetupEndpoint':
+          Alert.alert(event.body);
+          break;
+
+        case 'mobileKeysDidSetupEndpointtoStartup':
+          SeosMobileKeysModule.setupEndpoint();
+          break;
+
+        default:
+          break;
+      }
+    });
+
+    SeosMobileKeysModule?.getName()
+      .then((name: any) => {
+        console.log(name); // Output: "SeosMobileKeys"
+      })
+      .catch((err: any) => {
+        console.error(err);
+      });
+
+    SeosMobileKeysModule?.initializeSDK()
+      .then((res: any) => {
+        console.log(res); // Output: "SeosMobileKeys"
+      })
+      .catch((err: any) => {
+        console.error(err);
+      });
+  }, []);
 
   return (
-    <View style={backgroundStyle}>
+    <SafeAreaView style={backgroundStyle}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <ScrollView
-        style={backgroundStyle}>
-        <View style={{paddingRight: safePadding}}>
-          <Header/>
-        </View>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-            paddingHorizontal: safePadding,
-            paddingBottom: safePadding,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </View>
+      <View style={{alignItems: 'center' , marginTop : 30}}>
+        <Image
+          source={require('./asserts/Key.gif')}
+          style={{width: 300, height: 300}}
+        />
+      </View>
+      <View
+        style={{
+          flexGrow: 1,
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: 20,
+        }}>
+        <Button
+          title="Enable Sdk"
+          onPress={() => {
+            const {SeosMobileKeysModule} = NativeModules;
+            SeosMobileKeysModule?.enableSDK('B5QZ-7AED-B2QR-AHYV');
+          }}
+        />
+
+        <Button
+          title="Fetch keys"
+          onPress={() => {
+            const {SeosMobileKeysModule} = NativeModules;
+            SeosMobileKeysModule?.getTheMobileKeys()
+              .then((res: any) => {
+                console.log('DEBUG ---- getTheMobileKeys', res); // Output: "SeosMobileKeys"
+              })
+              .catch((err: any) => {
+                console.error('DEBUG ---- getTheMobileKeys Error ---- ', err);
+              });
+          }}
+        />
+
+        <Button
+          title="Get Saved Key"
+          onPress={() => {
+            const {SeosMobileKeysModule} = NativeModules;
+            SeosMobileKeysModule?.getSavedKey()
+              .then((res: any) => {
+                console.log('DEBUG ---- getSavedKey', res); // Output: "SeosMobileKeys"
+              })
+              .catch((err: any) => {
+                console.error('DEBUG ---- getSavedKey Error ---- ', err);
+              });
+          }}
+        />
+
+        <Button
+          title="Toggle Scanning"
+          onPress={() => {
+            const {SeosMobileKeysModule} = NativeModules;
+            SeosMobileKeysModule?.toggleScanning()
+              .then((res: any) => {
+                console.log('DEBUG ---- toggleScanning', res); // Output: "SeosMobileKeys"
+              })
+              .catch((err: any) => {
+                console.error('DEBUG ---- toggleScanning Error ---- ', err);
+              });
+          }}
+        />
+
+        <Button
+          title="scanning State"
+          onPress={() => {
+            const {SeosMobileKeysModule} = NativeModules;
+            SeosMobileKeysModule?.scanningState()
+              .then((res: any) => {
+                console.log('DEBUG ---- scanningState', res); // Output: "SeosMobileKeys"
+              })
+              .catch((err: any) => {
+                console.error('DEBUG ---- scanningState Error ---- ', err);
+              });
+          }}
+        />
+      </View>
+    </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+// const styles = StyleSheet.create({
+//   sectionContainer: {
+//     marginTop: 32,
+//     paddingHorizontal: 24,
+//   },
+//   sectionTitle: {
+//     fontSize: 24,
+//     fontWeight: '600',
+//   },
+//   sectionDescription: {
+//     marginTop: 8,
+//     fontSize: 18,
+//     fontWeight: '400',
+//   },
+//   highlight: {
+//     fontWeight: '700',
+//   },
+// });
 
 export default App;

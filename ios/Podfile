@@ -16,6 +16,9 @@ end
 
 target 'doorunlock' do
   config = use_native_modules!
+  pod 'BerTlv', :path  => 'Mobile_Keys_IOS_SDK/Debug/BerTlv.podspec'
+  pod 'JSONModel', :path  => 'Mobile_Keys_IOS_SDK/Debug/JSONModel.podspec'
+  pod 'CocoaLumberjack', :path  => 'Mobile_Keys_IOS_SDK/Debug/CocoaLumberjack.podspec'
   pod 'SeosMobileKeysSDK-Debug', :path  => 'Mobile_Keys_IOS_SDK/Debug/SeosMobileKeysSDK-Debug.podspec'
   use_react_native!(
     :path => config[:reactNativePath],

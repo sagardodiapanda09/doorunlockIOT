@@ -3,27 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		B15E2216439411D776C9A102 /* libPods-doorunlock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AA25E493B9B2F340A9FFA85 /* libPods-doorunlock.a */; };
+		886D62F1A76DC7DD92B486E3 /* libPods-doorunlock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A5CA11CD5EDAE360CAC333 /* libPods-doorunlock.a */; };
 		C0FC0EB75954CFD28B0FA8EA /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
+		EBD62DF12D6DD8A400DB1457 /* MobileKeysController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD62DF02D6DD8A400DB1457 /* MobileKeysController.swift */; };
+		EBDA606C2D6DC34B00DE5C50 /* BerTlv.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBB07AF32D6DAE05006C9A1B /* BerTlv.xcframework */; };
+		EBDA606E2D6DC52200DE5C50 /* JSONModel.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDA606D2D6DC52200DE5C50 /* JSONModel.xcframework */; };
+		EBDA60702D6DC52B00DE5C50 /* CocoaLumberjack.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBDA606F2D6DC52B00DE5C50 /* CocoaLumberjack.xcframework */; };
+		EBDA60722D6DC99600DE5C50 /* SeosMobileKeysModule.m in Sources */ = {isa = PBXBuildFile; fileRef = EBDA60712D6DC99600DE5C50 /* SeosMobileKeysModule.m */; };
+		EBEFABDA2D7187DA007EEB1B /* AssaAbloyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBEFABD92D7187DA007EEB1B /* AssaAbloyHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		10BE2F7667F5F187B4FC342C /* Pods-doorunlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doorunlock.debug.xcconfig"; path = "Target Support Files/Pods-doorunlock/Pods-doorunlock.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* doorunlock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = doorunlock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = doorunlock/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = doorunlock/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = doorunlock/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		17A5CA11CD5EDAE360CAC333 /* libPods-doorunlock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-doorunlock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = doorunlock/AppDelegate.swift; sourceTree = "<group>"; };
-		7AA25E493B9B2F340A9FFA85 /* libPods-doorunlock.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-doorunlock.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = doorunlock/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AC680045D54CE3A0ECC3C5AC /* Pods-doorunlock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doorunlock.debug.xcconfig"; path = "Target Support Files/Pods-doorunlock/Pods-doorunlock.debug.xcconfig"; sourceTree = "<group>"; };
-		E5E9F63B66C8C97C1724381A /* Pods-doorunlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doorunlock.release.xcconfig"; path = "Target Support Files/Pods-doorunlock/Pods-doorunlock.release.xcconfig"; sourceTree = "<group>"; };
+		A5DF2D6CC1F5671A09757A8B /* Pods-doorunlock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-doorunlock.release.xcconfig"; path = "Target Support Files/Pods-doorunlock/Pods-doorunlock.release.xcconfig"; sourceTree = "<group>"; };
+		EB1F353B2D6D971A00EBE670 /* SeosMobileKeysSDK.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:333BNLD22V:ASSAABLOY AB"; lastKnownFileType = wrapper.xcframework; name = SeosMobileKeysSDK.xcframework; path = Mobile_Keys_IOS_SDK/Debug/SeosMobileKeysSDK.xcframework; sourceTree = "<group>"; };
+		EB1F353F2D6D976D00EBE670 /* libBerTlv.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBerTlv.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB1F35412D6D994E00EBE670 /* libBerTlv.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libBerTlv.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBB07AF32D6DAE05006C9A1B /* BerTlv.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BerTlv.xcframework; path = Mobile_Keys_IOS_SDK/Debug/BerTlv.xcframework; sourceTree = "<group>"; };
+		EBD62DF02D6DD8A400DB1457 /* MobileKeysController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MobileKeysController.swift; path = doorunlock/MobileKeysController.swift; sourceTree = "<group>"; };
+		EBDA606D2D6DC52200DE5C50 /* JSONModel.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = JSONModel.xcframework; path = Mobile_Keys_IOS_SDK/Debug/JSONModel.xcframework; sourceTree = "<group>"; };
+		EBDA606F2D6DC52B00DE5C50 /* CocoaLumberjack.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = CocoaLumberjack.xcframework; path = Mobile_Keys_IOS_SDK/Debug/CocoaLumberjack.xcframework; sourceTree = "<group>"; };
+		EBDA60712D6DC99600DE5C50 /* SeosMobileKeysModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SeosMobileKeysModule.m; path = doorunlock/SeosMobileKeysModule.m; sourceTree = "<group>"; };
+		EBDA60732D6DC9CE00DE5C50 /* SeosMobileKeysModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SeosMobileKeysModule.h; path = doorunlock/SeosMobileKeysModule.h; sourceTree = "<group>"; };
+		EBEFABD92D7187DA007EEB1B /* AssaAbloyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssaAbloyHelper.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -32,7 +48,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B15E2216439411D776C9A102 /* libPods-doorunlock.a in Frameworks */,
+				EBDA60702D6DC52B00DE5C50 /* CocoaLumberjack.xcframework in Frameworks */,
+				EBDA606E2D6DC52200DE5C50 /* JSONModel.xcframework in Frameworks */,
+				EBDA606C2D6DC34B00DE5C50 /* BerTlv.xcframework in Frameworks */,
+				886D62F1A76DC7DD92B486E3 /* libPods-doorunlock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +66,10 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
+				EBDA60712D6DC99600DE5C50 /* SeosMobileKeysModule.m */,
+				EBDA60732D6DC9CE00DE5C50 /* SeosMobileKeysModule.h */,
+				EBEFABD92D7187DA007EEB1B /* AssaAbloyHelper.swift */,
+				EBD62DF02D6DD8A400DB1457 /* MobileKeysController.swift */,
 			);
 			name = doorunlock;
 			sourceTree = "<group>";
@@ -54,8 +77,14 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EBDA606F2D6DC52B00DE5C50 /* CocoaLumberjack.xcframework */,
+				EBDA606D2D6DC52200DE5C50 /* JSONModel.xcframework */,
+				EBB07AF32D6DAE05006C9A1B /* BerTlv.xcframework */,
+				EB1F35412D6D994E00EBE670 /* libBerTlv.a */,
+				EB1F353F2D6D976D00EBE670 /* libBerTlv.a */,
+				EB1F353B2D6D971A00EBE670 /* SeosMobileKeysSDK.xcframework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				7AA25E493B9B2F340A9FFA85 /* libPods-doorunlock.a */,
+				17A5CA11CD5EDAE360CAC333 /* libPods-doorunlock.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -92,8 +121,8 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AC680045D54CE3A0ECC3C5AC /* Pods-doorunlock.debug.xcconfig */,
-				E5E9F63B66C8C97C1724381A /* Pods-doorunlock.release.xcconfig */,
+				10BE2F7667F5F187B4FC342C /* Pods-doorunlock.debug.xcconfig */,
+				A5DF2D6CC1F5671A09757A8B /* Pods-doorunlock.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -105,13 +134,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "doorunlock" */;
 			buildPhases = (
-				B483AEAD503A988E80F92F60 /* [CP] Check Pods Manifest.lock */,
+				4BB3FA1EEE58E7DF4C2B3630 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				D8CD1E57A5D8DF1FFEE88F3F /* [CP] Embed Pods Frameworks */,
-				9C83F08D134DA5AA4A00A74A /* [CP] Copy Pods Resources */,
+				1AC47779742E5921FA2E5D81 /* [CP] Embed Pods Frameworks */,
+				5BA1C4F1AD08024ADFFD706C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,7 +160,7 @@
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1620;
 					};
 				};
 			};
@@ -183,24 +212,24 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"$REACT_NATIVE_PATH/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"$REACT_NATIVE_PATH/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		9C83F08D134DA5AA4A00A74A /* [CP] Copy Pods Resources */ = {
+		1AC47779742E5921FA2E5D81 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-doorunlock/Pods-doorunlock-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-doorunlock/Pods-doorunlock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-doorunlock/Pods-doorunlock-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-doorunlock/Pods-doorunlock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-doorunlock/Pods-doorunlock-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-doorunlock/Pods-doorunlock-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		B483AEAD503A988E80F92F60 /* [CP] Check Pods Manifest.lock */ = {
+		4BB3FA1EEE58E7DF4C2B3630 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,21 +251,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D8CD1E57A5D8DF1FFEE88F3F /* [CP] Embed Pods Frameworks */ = {
+		5BA1C4F1AD08024ADFFD706C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-doorunlock/Pods-doorunlock-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-doorunlock/Pods-doorunlock-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-doorunlock/Pods-doorunlock-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-doorunlock/Pods-doorunlock-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-doorunlock/Pods-doorunlock-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-doorunlock/Pods-doorunlock-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -247,6 +276,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				761780ED2CA45674006654EE /* AppDelegate.swift in Sources */,
+				EBD62DF12D6DD8A400DB1457 /* MobileKeysController.swift in Sources */,
+				EBDA60722D6DC99600DE5C50 /* SeosMobileKeysModule.m in Sources */,
+				EBEFABDA2D7187DA007EEB1B /* AssaAbloyHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,12 +287,17 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC680045D54CE3A0ECC3C5AC /* Pods-doorunlock.debug.xcconfig */;
+			baseConfigurationReference = 10BE2F7667F5F187B4FC342C /* Pods-doorunlock.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9476393X7D;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = doorunlock/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -273,8 +310,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.shashigroup.reservation.staging;
 				PRODUCT_NAME = doorunlock;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/arunpatel/Documents/projects/demos/doorunlock/ios/doorunlock/SeosMobileKeysModule.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -283,11 +322,16 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5E9F63B66C8C97C1724381A /* Pods-doorunlock.release.xcconfig */;
+			baseConfigurationReference = A5DF2D6CC1F5671A09757A8B /* Pods-doorunlock.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9476393X7D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = doorunlock/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -300,8 +344,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.shashigroup.reservation.staging;
 				PRODUCT_NAME = doorunlock;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/arunpatel/Documents/projects/demos/doorunlock/ios/doorunlock/SeosMobileKeysModule.h;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -376,10 +422,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -448,10 +491,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

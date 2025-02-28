@@ -25,9 +25,9 @@ Pod::Spec.new do |s|
     'SeosMobileKeysSDK-Debug_Privacy' => ['SeosMobileKeysSDK/PrivacyInfo.xcprivacy'],
   }
 
-  s.dependency 'JSONModel'
-  s.dependency 'CocoaLumberjack'
-  s.dependency 'BerTlv'
+  # s.dependency 'JSONModel'
+  # s.dependency 'CocoaLumberjack'
+  # s.dependency 'BerTlv'
   s.vendored_frameworks = 'SeosMobileKeysSDK.xcframework'
 end
 
