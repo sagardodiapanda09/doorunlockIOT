@@ -55,7 +55,6 @@ class MobileKeysController : NSObject, MobileKeysManagerDelegate, MobileKeysMoti
   override init() {
       super.init()
       // Create the MobileKeysManager
-      UserDefaults.standard.setValue("84B36C10-1F0A-4813-9A4B-9BD9FBCFAC37", forKey: "deviceId")
       mobileKeysManager = createInitializedMobileKeysManager()
       
 //        locationManager = CLLocationManager()
