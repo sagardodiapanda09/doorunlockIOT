@@ -4,8 +4,8 @@
  *
  * @format
  */
-
-import React, {useEffect} from 'react';
+//@ts-nocheck
+import React, { useEffect } from 'react';
 import {
   StatusBar,
   // StyleSheet,
@@ -19,7 +19,7 @@ import {
   View,
 } from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -30,8 +30,8 @@ function App(): React.JSX.Element {
   };
 
   useEffect(() => {
-    const {SeosMobileKeysModule} = NativeModules;
-    console.log({SeosMobileKeysModule});
+    const { SeosMobileKeysModule } = NativeModules;
+    console.log({ SeosMobileKeysModule });
     const eventEmitter = new NativeEventEmitter(SeosMobileKeysModule);
 
     eventEmitter.addListener('onMessageFromSeos', event => {
@@ -73,10 +73,10 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <View style={{alignItems: 'center' , marginTop : 30}}>
+      <View style={{ alignItems: 'center', marginTop: 30 }}>
         <Image
           source={require('./asserts/Key.gif')}
-          style={{width: 300, height: 300}}
+          style={{ width: 300, height: 300 }}
         />
       </View>
       <View
@@ -89,7 +89,7 @@ function App(): React.JSX.Element {
         <Button
           title="Enable Sdk"
           onPress={() => {
-            const {SeosMobileKeysModule} = NativeModules;
+            const { SeosMobileKeysModule } = NativeModules;
             SeosMobileKeysModule?.enableSDK('B5QZ-7AED-B2QR-AHYV');
           }}
         />
@@ -97,7 +97,7 @@ function App(): React.JSX.Element {
         <Button
           title="Fetch keys"
           onPress={() => {
-            const {SeosMobileKeysModule} = NativeModules;
+            const { SeosMobileKeysModule } = NativeModules;
             SeosMobileKeysModule?.getTheMobileKeys()
               .then((res: any) => {
                 console.log('DEBUG ---- getTheMobileKeys', res); // Output: "SeosMobileKeys"
@@ -111,7 +111,7 @@ function App(): React.JSX.Element {
         <Button
           title="Get Saved Key"
           onPress={() => {
-            const {SeosMobileKeysModule} = NativeModules;
+            const { SeosMobileKeysModule } = NativeModules;
             SeosMobileKeysModule?.getSavedKey()
               .then((res: any) => {
                 console.log('DEBUG ---- getSavedKey', res); // Output: "SeosMobileKeys"
@@ -125,7 +125,7 @@ function App(): React.JSX.Element {
         <Button
           title="Toggle Scanning"
           onPress={() => {
-            const {SeosMobileKeysModule} = NativeModules;
+            const { SeosMobileKeysModule } = NativeModules;
             SeosMobileKeysModule?.toggleScanning()
               .then((res: any) => {
                 console.log('DEBUG ---- toggleScanning', res); // Output: "SeosMobileKeys"
@@ -139,7 +139,7 @@ function App(): React.JSX.Element {
         <Button
           title="scanning State"
           onPress={() => {
-            const {SeosMobileKeysModule} = NativeModules;
+            const { SeosMobileKeysModule } = NativeModules;
             SeosMobileKeysModule?.scanningState()
               .then((res: any) => {
                 console.log('DEBUG ---- scanningState', res); // Output: "SeosMobileKeys"

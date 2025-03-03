@@ -313,7 +313,7 @@
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.shashigroup.reservation.staging;
 				PRODUCT_NAME = doorunlock;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/arunpatel/Documents/projects/demos/doorunlock/ios/doorunlock/SeosMobileKeysModule.h;
+				SWIFT_OBJC_BRIDGING_HEADER = doorunlock/SeosMobileKeysModule.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -347,7 +347,7 @@
 				"PRODUCT_BUNDLE_IDENTIFIER[sdk=iphoneos*]" = com.shashigroup.reservation.staging;
 				PRODUCT_NAME = doorunlock;
 				SWIFT_INSTALL_OBJC_HEADER = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/arunpatel/Documents/projects/demos/doorunlock/ios/doorunlock/SeosMobileKeysModule.h;
+				SWIFT_OBJC_BRIDGING_HEADER = doorunlock/SeosMobileKeysModule.h;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
